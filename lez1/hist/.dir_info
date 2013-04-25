@@ -1,0 +1,5 @@
+Bash History: comandi passati
+
+* Elencare i file, senza scrivere il comando (up,down)
+* C'è un file già visto, rileggiamolo, senza scrivere il comando (ctrl-r)
+* Torniamo alla directory padre, di nuovo senza scrivere il comando (a scelta)

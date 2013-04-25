@@ -1,0 +1,9 @@
+Prima lezione: file e processi
+
+* Mostrare il contenuto della cartella corrente (ls)
+* Tornare alla cartella padre, e ritornare qui (cd)
+* Trovare il file che contiene questo messaggio (ls)
+* Verificare il contenuto del file trovato (cat)
+* Leggere il file lorem.txt (more, less)
+
+* Prossime lezioni, nell'ordine: tab, hist, fileop (cd)

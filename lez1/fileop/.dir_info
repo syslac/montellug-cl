@@ -1,0 +1,12 @@
+Operazioni sui file
+
+* Copiare il file lorem.txt in lorem2.txt (cp)
+* Copiare il file lorem.txt della cartella padre, con (cp)
+    * Sovrascrittura automatica
+    * Sovrascrittura e backup (b)
+    * Richiesta di sovrascrittura (i)
+    * Nessuna sovrascrittura (u)
+* Rinominare lorem2.txt in inutile.txt (mv)
+* Rimuovere inutile.txt (rm)
+
+* Esecuzione file: eseguire check.pl per verifica esercizio (./)

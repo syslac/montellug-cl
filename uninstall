@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ -f "$HOME/.bashrc" ]; then
+perl -pi -e "s/^.*?dir_info.*$//" $HOME/.bashrc;
+perl -i -ne '/^$/ ? $i++ : do{print "\n" x $i, $_; $i=0}' /home/syslac/.bashrc;
+fi;
+
+if [ -f "$HOME/.zshrc" ]; then
+perl -pi -e "s/^.*?dir_info.*$//" $HOME/.zshrc;
+perl -i -ne '/^$/ ? $i++ : do{print "\n" x $i, $_; $i=0}' /home/syslac/.zshrc;
+fi;
+
+kill -9 $PPID;
+exit;
