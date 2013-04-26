@@ -1,0 +1,11 @@
+Basi sui processi:
+
+* Visualizza processi attivi (top)
+* Lista dei processi (ps)
+    * dell'utente (u)
+    * tutti (e)
+    * con linea di comando (ax)
+* Lancia in background ./infinite
+    * Uccidilo con il PID riportato (kill)
+    * Uccidilo per nome (killall)
+* Ricerca il PID di infinite (ps, grep)

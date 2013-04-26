@@ -1,0 +1,8 @@
+Comandi con Ctrl
+
+* Lancia e uccidi ./infinite (C)
+* Lancia e sospendi ./infinite (Z)
+* Riattiva e uccidi ./infinite (fg, C)
+* Pulisci lo schermo (L)
+* Testa l'effetto di Ctrl-S, Ctrl-Q
+* Esci dalla sessione (D)

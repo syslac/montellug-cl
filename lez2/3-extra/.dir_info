@@ -1,0 +1,6 @@
+Varie sui processi
+
+* Leggi file.txt e sospendi (less, ctrl-Z)
+* Scopri quale processo sta occupando il file (lsof)
+* Abbassa la priorità del processo (renice)
+* Prova htop e atop (se installati)
