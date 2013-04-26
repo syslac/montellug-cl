@@ -1,0 +1,8 @@
+Operazioni sulle directory:
+
+* Creare una directory a scelta (mkdir)
+* Creare un file nella directory (touch)
+* Copiare la directory appena creata (r)
+* Rimuovere la vecchia copia (r)
+* Cancellare il file nella directory (rm)
+* Cancellare la directory vuota (rmdir)
