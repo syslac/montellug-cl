@@ -1,0 +1,6 @@
+Lezione 2: processi
+
+* Lanciare un processo (infinite)
+* Uccisione con Ctrl-C
+* Lanciare un processo in background (&)
+* Riportare in foreground (fg)
