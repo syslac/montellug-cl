@@ -7,6 +7,8 @@ Operazioni sui file
     * Richiesta di sovrascrittura (i)
     * Nessuna sovrascrittura (u)
 * Rinominare lorem2.txt in inutile.txt (mv)
-* Rimuovere inutile.txt (rm)
+* Rimuovere inutile.txt e lorem.txt (rm)
+* Creare un link a lorem.txt dalla cartella padre (ln)
+* Identificare il link (ls)
 
 * Esecuzione file: eseguire check.pl per verifica esercizio (./)
