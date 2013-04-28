@@ -1,0 +1,12 @@
+Chmod - permessi
+
+* Eseguire il comando "chmod -R 000 *"
+* Provare a leggere check.pl (cat)
+* Dare permessi di lettura a check.pl (chmod)
+    * Opzionale: sia con +r che con ottetti
+* Provare ad eseguire check.pl (./)
+* Dare permessi di esecuzione a check.pl (chmod)
+* Provare ad elencare il contenuto di dir (ls)
+* Provare ad entrare in dir (cd)
+* Dare i permessi adeguati a dir (chmod)
+* Dare i permessi adeguati a dir ed al suo contenuto (chmod)
