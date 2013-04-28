@@ -1,0 +1,7 @@
+Prime idee per lo scripting - variabili e cicli
+
+* Scopri qual è la shell predefinita per il tuo utente ($SHELL)
+* Crea un link simbolico a questa cartella nella tua home ($HOME)
+* Aggiungi estensione .txt a tutti i file in questa cartella (for)
+* Crea un ciclo infinito (while)
+* Pausa: Ciclo infinito di eject -t ?

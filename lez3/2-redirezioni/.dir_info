@@ -1,0 +1,12 @@
+Redirezioni e pipe
+
+* Stampa l'output di ls -a nel file list.txt (>)
+* Aggiungi ls della cartella padre in coda (>>)
+* Conta quanti file sono elencati in list.txt (<, wc)
+* Esegui la stessa operazione senza usare un file intermedio (|)
+* Cerca il processo bash in ps aux (|,grep)
+* Cerca il PID del processo bash in ps -e (|, grep, cut)
+
+(for future reference, this is w/Perl&Awk, maybe try this in a future lecture)
+ps aux | grep zsh | awk -F "\\\\s+" '{print $2}'
+ps aux | grep zsh | perl -pe '$_ = (split(/\s+/,$_))[1]."\n"'
