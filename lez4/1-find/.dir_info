@@ -1,0 +1,14 @@
+Find - Ricerca *di* file
+
+* Trova l'eseguibile di find (name)
+* Trova tutti i file "inutili" nella lezione4 (iname)
+* Trova solo i file "inutili" nella cartella principale di lez4 (maxdepth)
+* Elimina tutti i file "inutili" nella lezione4 (-delete)
+* Trova tutti i "lorem.txt" in queste lezioni e rendili eseguibili (-exec)
+* Rimuovi il permesso di esecuzione, ma con una sola riga di comando (xargs)
+
+For reference, correct syntax, based on some tests:
+find ../ -iname '*lorem*' -exec chmod a+x {} \; 
+find ../ -iname '*lorem*' -print0 | xargs -0 chmod a-x
+
+Notes: last exercise requires explanation about "for each file" vs "single command line"
