@@ -1,0 +1,5 @@
+Altri esercizi su manipolazione testo:
+
+* Seleziona un campo a scelta dall'output di ps aux (awk -F)
+* Stampa una lista di file senza estensioni (perl -pe)
+* Sostituisci ogni parola con "MontelLUG" in text.txt (perl -pi -e)
