@@ -2,6 +2,7 @@ Prima lezione: file e processi
 
 * Mostrare il contenuto della cartella corrente (ls)
 * Tornare alla cartella padre, e ritornare qui (cd)
+* Stampare il nome della cartella corrente (pwd)
 * Trovare il file che contiene questo messaggio (ls)
 * Verificare il contenuto del file trovato (cat)
 * Leggere il file lorem.txt (more, less)
