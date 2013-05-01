@@ -1,0 +1,4 @@
+* wget http://www.montellug.it
+* wget -r -l1 http://www.montellug.it
+* curl http://www.montellug.it
+* curl www.montellug.it | grep href | perl -pe 's/.*?href=(\S+).*/$1\n/'

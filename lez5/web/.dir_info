@@ -1,0 +1,6 @@
+Web - Alcuni comandi per interagire con internet
+
+* Scarica la home page di montellug.it in index.html (wget)
+* Scarica la home page di montellug.it e segui i link per 1 livello (wget)
+* Scarica e visualizza il codice della home page di montellug.it (curl)
+* Visualizza i link nell'home page di montellug.it (curl | grep | perl)
