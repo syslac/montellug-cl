@@ -1,0 +1,12 @@
+Basi di manutenzione di sistema:
+
+* Leggi i log di sistema (dmesg)
+* Leggi la fine del log di Xorg (tail)
+* Segui lo sviluppo del log di sistema (es: inserisci chiavetta) (tail -f)
+* Cerca errori nel log di Xorg (cat | grep)
+* Trova informazioni sull'hardware (lspci)
+* Trova informazioni sui dispositivi usb (lsusb)
+* Trova informazioni sulla cpu (cat)
+* Trova informazioni sulla batteria (cat)
+* Controlla le informazioni sulla scheda video (glxinfo | grep)
+* Testa la performance della scheda video (glxgears)

@@ -1,0 +1,10 @@
+* dmesg
+* tail /var/log/Xorg.0.log
+* tail -f /var/log/syslog
+* cat var/log/Xorg.0.log | grep EE
+* lspci | less
+* lsusb
+* cat /proc/cpuinfo
+* cat /sys/class/power_supply/BAT0/
+* glxinfo | grep -i direct
+* glxgears

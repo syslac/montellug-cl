@@ -1,0 +1,6 @@
+Trucchi per pacchetti deb
+
+* Elenca i file del pacchetto "xterm" (dpkg)
+* Trova quale pacchetto contiene il compilatore gcc (dpkg)
+* Elenca tutti i pacchetti installati (dpkg)
+* Metti in hold il pacchetto "xterm" (dpkg)

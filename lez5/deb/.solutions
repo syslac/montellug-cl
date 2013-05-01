@@ -1,0 +1,4 @@
+* dpkg -L xterm
+* dpkg -S /usr/bin/gcc
+* dpkg --get-selections
+* echo "xterm hold" | dpkg --set-selections
