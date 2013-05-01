@@ -1,0 +1,9 @@
+* top
+* ps
+* ps u
+* ps -e
+* ps aux
+* ./infinite &
+* kill PID
+* killall infinite
+* ps -e | grep infinite

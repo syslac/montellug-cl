@@ -1,0 +1,4 @@
+* less file.txt ctrl-Z
+* lsof file.txt
+* renice 20 PID
+* atop; htop
