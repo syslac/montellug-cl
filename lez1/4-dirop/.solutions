@@ -1,0 +1,6 @@
+* mkdir nome
+* touch nome/file
+* cp -r nome nome2
+* rm -r nome
+* rm nome2/file
+* rmdir nome2

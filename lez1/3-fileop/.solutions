@@ -1,0 +1,10 @@
+* cp lorem.txt lorem2.txt
+* cp ../lorem.txt .
+* cp -vb ../lorem.txt .
+* cp -vi ../lorem.txt .
+* cp -vu ../lorem.txt .
+* mv lorem2.txt inutile.txt
+* rm inutile.txt lorem.txt
+* ln -s ../lorem.txt lorem.txt
+* ls -l
+* ./check.pl
