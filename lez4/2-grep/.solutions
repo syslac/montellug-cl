@@ -1,0 +1,7 @@
+* ps -e | grep bash
+* lspci | grep net
+* grep -i top5 *
+* grep -l top5 *
+* grep -niH top5 *
+* grep -niH top5 * | grep sub
+* grep -nirH top5 $HOME/* | grep sub
