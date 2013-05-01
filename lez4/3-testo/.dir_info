@@ -3,5 +3,6 @@ Altri esercizi su manipolazione testo:
 * Seleziona un campo a scelta dall'output di ps aux (awk -F)
 * Ripeti lo stesso esercizio con perl (perl -pe)
 * Stampa una lista di file senza estensioni (perl -pe)
+* Leggi la soluzione dell'esercizio 3 (perl -ne)
 * Conta le righe che non sono vuote o commenti in main.pl (perl -ne)
 * Sostituisci ogni parola con "MontelLUG" in text.txt (perl -pi -e)
