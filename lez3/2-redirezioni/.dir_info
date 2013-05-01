@@ -9,6 +9,3 @@ Redirezioni e pipe
 * Rimuovere un file inesistente e mandare l'errore in err.txt (2>)
 * Sopprimere tutto l'output di un comando (>&)
 
-(for future reference, this is w/Perl&Awk, maybe try this in a future lecture)
-ps aux | grep zsh | awk -F "\\\\s+" '{print $2}'
-ps aux | grep zsh | perl -pe '$_ = (split(/\s+/,$_))[1]."\n"'
