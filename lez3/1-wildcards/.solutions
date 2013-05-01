@@ -1,0 +1,9 @@
+Wildcards:
+
+* ls *.txt
+* ls ?.txt
+* ls ?
+* ls [a-c]*
+* ls {a,d}
+* rm [^a-d]*
+

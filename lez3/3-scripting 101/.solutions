@@ -1,0 +1,6 @@
+* echo $SHELL
+* ln -s . $HOME/corso
+* for i in `ls *`; do mv $i $i.txt; done;
+* while [ /bin/true ]; do sleep 1; done;
+* while [ /bin/true ]; do eject -t; done;
+

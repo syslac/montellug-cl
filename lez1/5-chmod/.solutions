@@ -1,0 +1,10 @@
+* chmod -R 000 *
+* cat check.pl
+* chmod +r check.pl
+* chmod 444 check.pl
+* ./check.pl
+* chmod +x check.pl
+* ls dir
+* cd dir
+* chmod 755 dir
+* chmod -R 755 dir
