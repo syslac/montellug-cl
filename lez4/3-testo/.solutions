@@ -1,6 +1,8 @@
 * ps aux | grep bash | awk -F \\\\s '{ print $2; }'
 * ps aux | grep bash | perl -pe '$_ = (split(/\s+/,$_))[1]'
 * ls | perl -pe '$_ = (split(/\./,$_))[1..-1]'
-* perl -ne '$_ =~ s/\*\s*//; print if ($. == 3)' .solutions
+* head -n 3 .solutions | tail -n 1
+* perl -ne 's/\*\s*//; print if ($. == 3)' .solutions
+* grep -v ^# main.pl | grep -v ^$
 * perl -ne '$i++ if ($_ !~ /(^$|^\#)/); print $i,"\n";' main.pl
 * perl -pi -e 's/\w+/MontelLUG/g' text.txt
