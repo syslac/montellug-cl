@@ -1,0 +1,3 @@
+* tar -xjvf archive.tar.bz2
+* file photo.jpg
+* tar -czvf archivio2.tar.gz photo.jpg

@@ -1,0 +1,5 @@
+Alcuni comandi extra relativi ai file
+
+* Estrai l'archivio bz2 in questa cartella (tar)
+* Controlla il tipo del file estratto (file)
+* Crea un nuovo archivio gzip contenente il file estratto (tar)
