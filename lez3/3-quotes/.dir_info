@@ -1,0 +1,12 @@
+Quoting: il significato delle varie "virgolette"
+
+* Leggere file con spazio, facendosi aiutare da tab (cat)
+* Verificare che "touch file con spazi" crea 3 file diversi (touch)
+* Rimuovere tutti i file non nascosti (rm)
+* Creare un file chiamato ? (touch)
+* Ricreare file con spazio (touch)
+* Verificare la differenza tra ls *, ls "*" e ls '*' (ls)
+* Stampare il pacchetto del proprio kernel (si chiama linux-image-"versione") (uname)
+    * Bonus: installare gli header per il proprio kernel
+* Stampare "Siamo nella directory" seguito dal nome della directory corrente (pwd)
+* Verificare la differenza tra ls `pwd`, ls "`pwd`" ed ls '`pwd`' (ls)
