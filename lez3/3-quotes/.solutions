@@ -1,0 +1,10 @@
+* cat file\ con\ spazio
+* touch file con spazi
+* rm *
+* touch \?
+* touch "file con spazio"
+* ls *; ls "*"; ls '*'
+* echo linux-image-`uname -r`
+* apt-get install linux-headers-`uname -r`
+* echo "Siamo nella directory " $(pwd)
+* ls `pwd`; ls "`pwd`"; ls '`pwd`'

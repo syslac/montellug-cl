@@ -1,0 +1,7 @@
+* less ~/.bashrc
+* echo fortune >> ~/.bashrc
+* less /etc/bash.bashrc
+* perl -pi -e 's/^\#+(.*completion.*)$/$1/' /etc/bash.bashrc
+* alias ll="ls -l"
+* alias help="cat .dir_info 2> /dev/null"
+* echo 'alias help="cat .dir_info 2> /dev/null"' >> ~/.bashrc
