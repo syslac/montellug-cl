@@ -1,0 +1,133 @@
+#!/bin/sh
+
+# Esci direttamente nel caso in cui un'istruzione esca con errore
+set -e
+
+# Un po' di variabili che saranno utili più avanti
+DAEMON=/usr/bin/dbus-daemon
+UUIDGEN=/usr/bin/dbus-uuidgen
+UUIDGEN_OPTS=--ensure
+NAME=dbus
+DAEMONUSER=messagebus
+PIDDIR=/var/run/dbus
+PIDFILE=$PIDDIR/pid
+DESC="system message bus"
+
+# Se /usr/bin/dbus-daemon non esiste o non è eseguibile, esci
+test -x $DAEMON || exit 0
+
+# Aggiungi alle preferenze della shell questo file per la durata dello script 
+# Comprese variabili lì definite, etc
+. /lib/lsb/init-functions
+
+# Aggiungi alle preferenze della shell questo file per la durata dello script 
+PARAMS=""
+if [ -e /etc/default/dbus ]; then
+  . /etc/default/dbus
+fi
+
+# Funzione create_machineid; se l'eseguibile nella variabile testata esiste,
+# Esegui il comando con le opzioni nella variabile definita ad inizio script
+create_machineid() {
+  # Create machine-id file
+  if [ -x $UUIDGEN ]; then
+    $UUIDGEN $UUIDGEN_OPTS
+  fi
+}
+
+# Funzione per inizializzare il demone
+start_it_up()
+{
+    # Se la directory non esiste, creiamo 
+    # e diamo i permessi appropriati
+  if [ ! -d $PIDDIR ]; then
+    mkdir -p $PIDDIR
+    chown $DAEMONUSER $PIDDIR
+    chgrp $DAEMONUSER $PIDDIR
+  fi
+
+  # Se il filesystem proc non è montato, esci con errore nei log
+  if ! mountpoint -q /proc/ ; then
+    log_failure_msg "Can't start $DESC - /proc is not mounted"
+    return
+  fi
+
+  # Se esiste il file di PID (il demone è già attivo)
+  if [ -e $PIDFILE ]; then
+      # E se il demone è effettivamente attivo (risponde)
+    if $0 status > /dev/null ; then
+        # Esci con messaggio di successo nei log
+      log_success_msg "$DESC already started; not starting."
+      return
+    else
+        # Altrimenti, rimuovi file di pid e prosegui
+      log_success_msg "Removing stale PID file $PIDFILE."
+      rm -f $PIDFILE
+    fi
+  fi
+
+  create_machineid
+
+    # Esegui effettivamente il demone con le opzioni definite sopra
+    # start-stop-daemon è un comando esterno a questo script
+  log_daemon_msg "Starting $DESC" "$NAME"
+  start-stop-daemon --start --quiet --pidfile $PIDFILE \
+    --user $DAEMONUSER --exec $DAEMON -- --system $PARAMS
+  log_end_msg $?
+}
+
+# Funzione per spegnere il demone
+shut_it_down()
+{
+    # Logga l'evento e termine il demone
+  log_daemon_msg "Stopping $DESC" "$NAME"
+  start-stop-daemon --stop --retry 5 --quiet --oknodo --pidfile $PIDFILE \
+    --user $DAEMONUSER
+  # We no longer include these arguments so that start-stop-daemon
+  # can do its job even given that we may have been upgraded.
+  # We rely on the pidfile being sanely managed
+  # --exec $DAEMON -- --system $PARAMS
+  log_end_msg $?
+  # Elimina il file PID, per liberare per le prossime esecuzioni
+  rm -f $PIDFILE
+}
+
+# Funzione per ricaricare le impostazioni
+reload_it()
+{
+    # Ricarica le impostazioni, usando una chiamata a dbus stesso
+  create_machineid
+  log_action_begin_msg "Reloading $DESC config"
+  dbus-send --print-reply --system --type=method_call \
+            --dest=org.freedesktop.DBus \
+            / org.freedesktop.DBus.ReloadConfig > /dev/null
+  # hopefully this is enough time for dbus to reload it's config file.
+  log_action_end_msg $?
+}
+
+# Parte "main" dello script; controlla la prima opzione a riga di comando
+# ed esegue la funzione appropriata tra quelle definite sopra
+case "$1" in
+  start)
+    start_it_up
+  ;;
+  stop)
+    shut_it_down
+  ;;
+  reload|force-reload)
+    reload_it
+  ;;
+  restart)
+    shut_it_down
+    start_it_up
+  ;;
+  status)
+    status_of_proc -p $PIDFILE $DAEMON $NAME && exit 0 || exit $?
+    ;;
+    # Se l'argomento non è nessuno di questi, stampa un messaggio di utilizzo
+  *)
+    echo "Usage: /etc/init.d/$NAME {start|stop|reload|restart|force-reload|status}" >&2
+    exit 2
+  ;;
+esac
+

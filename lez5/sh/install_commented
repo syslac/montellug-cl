@@ -1,0 +1,18 @@
+#!/bin/sh
+# Se eseguito con ./install, esegui con la shell /bin/sh, la predefinita di sistema
+
+# Se ~/.bashrc esiste ed è un file regolare
+[ -f "$HOME/.bashrc" ] &&
+# Aggiungi a fine file questa regola per sovrascrivere il comportamento di cd
+echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info || echo ""; }" >> $HOME/.bashrc ||
+# Altrimenti, non stampa nulla (il comando esce comunque con successo)
+echo "";
+
+# Stessa cosa nel caso esista ~/.zshrc
+[ -f "$HOME/.zshrc" ] &&
+echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info || echo ""; }" >> $HOME/.zshrc ||
+echo "";
+
+# Se la shell dell'utente è zsh, esegui zsh, altrimenti esegui bash
+# In questa nuova shell, le nuove impostazioni saranno già attive
+test  $SHELL = "/bin/zsh" && exec zsh || exec bash ;
