@@ -1,0 +1,6 @@
+Sintassi generale di un comando:
+
+* Eseguire ./comando 
+* Eseguire ./comando prova
+* Eseguire ./comando --help
+* Eseguire ./comando -v --help prova arg2
