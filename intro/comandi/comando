@@ -1,0 +1,18 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use utf8;
+
+@ARGV = grep { $_ } @ARGV;
+if (@ARGV) {
+my @opts = grep { /^-/ } @ARGV;
+my @args = grep { /^[^-]/ } @ARGV;
+
+print "Il comando è stato invocato con ".scalar(@ARGV)." argomenti\n";
+print "Di cui ".scalar(@opts)." saranno interpretati come opzioni : ".join(",",@opts)."\n";
+print "e ".scalar(@args)." sono argomenti : ".join(",",@args)."\n";
+}
+else {
+print "Il comando è stato eseguito senza argomenti\n";
+}
