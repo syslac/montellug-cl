@@ -1,0 +1,43 @@
+#!/bin/sh
+
+doindent()
+{
+    # Input: livello di indent
+    # Stampa l'indentazione necessaria (calcolata dalla funzione traverse)
+    # sotto forma di 2 spazi per indentazione
+    j=0;
+    while [ "$j" -lt "$1" ]; do
+      echo -en "  " 
+      j=`expr $j + 1`
+    done
+}
+
+traverse() 
+{
+  # Input: prima la cartella da elaborare, poi il liello di indentazione corrente
+  indent="$2"
+
+  # Per ogni elemento nella directory corrente:
+  ls "$1" | while read i
+  do
+    # Indenta l'output quanto necessario
+    doindent $2
+    # Se è una directory, richiama la funzione ricorsivamente:
+    # notare che la richiamiamo come sottoshell (senza source)
+    # in modo che al cambio directory non influenzi le variabili correnti
+    if [ -d "$1/$i" ]; then
+      echo "Directory: $1/$i"
+      traverse "$1/$i" `expr $2 + 1`
+    # Se è un file, stampalo
+    else 
+      echo "File: $1/$i"
+    fi
+  done
+}
+
+# Se non abbiamo argomenti, partiamo dalla cartella `pwd`
+if [ -z "$1" ]; then
+  traverse . 0
+else
+  traverse "$1" 0
+fi
