@@ -1,5 +1,5 @@
 * ls
-* cd..; cd lez1
+* cd..; cd -
 * pwd
 * ls -a
 * cat .dir_info
