@@ -1,11 +1,11 @@
 #!/bin/sh
 
 [ -f "$HOME/.bashrc" ] &&
-echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info || echo ""; }" >> $HOME/.bashrc ||
-echo "";
+echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info; }" >> $HOME/.bashrc ||
+echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info; }" >> $HOME/.bashrc ;
 
 [ -f "$HOME/.zshrc" ] &&
-echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info || echo ""; }" >> $HOME/.zshrc ||
+echo "function cd() { builtin cd \"\$1\"; [ -f '.dir_info' ] && cat .dir_info; }" >> $HOME/.zshrc ||
 echo "";
 
 test  $SHELL = "/bin/zsh" && exec zsh || exec bash ;
