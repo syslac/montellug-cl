@@ -8,3 +8,4 @@ Altri esercizi su manipolazione testo:
 * Stampa le righe che non sono vuote o commenti in main.pl (grep | grep)
 * Ripeti l'esercizio in perl, contando le righe (perl -ne)
 * Sostituisci ogni parola con "MontelLUG" in text.txt (perl -pi -e)
+* Cancella le righe che contengono "MontelLUG" da quel file (sed -i)

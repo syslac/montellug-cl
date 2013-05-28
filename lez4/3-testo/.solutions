@@ -6,3 +6,4 @@
 * grep -v ^# main.pl | grep -v ^$
 * perl -ne '$i++ if ($_ !~ /(^$|^\#)/); print $i,"\n";' main.pl
 * perl -pi -e 's/\w+/MontelLUG/g' text.txt
+* sed -i '/MontelLUG/d' text.txt

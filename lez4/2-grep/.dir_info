@@ -6,4 +6,5 @@ Grep - Ricerca *nei* file
 * Elenca i nomi file che la contengono (l)
 * Trova file e riga per ogni occorrenza (nH)
 * Raffina la ricerca per trovare solo la definizione (cerca "sub") (|)
+* Come l'esercizio precedente, ma escludi la definizione (v)
 * Ripeti la ricerca a partire dalla tua home (r)
