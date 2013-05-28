@@ -4,4 +4,5 @@
 * perl -pi -e 's/^\#+(.*completion.*)$/$1/' /etc/bash.bashrc
 * alias ll="ls -l"
 * alias help="cat .dir_info 2> /dev/null"
+* alias solutions="cat .solutions 2> /dev/null"
 * echo 'alias help="cat .dir_info 2> /dev/null"' >> ~/.bashrc

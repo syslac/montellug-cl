@@ -6,4 +6,5 @@ Preferenze ed alias
     * Bonus: abilitare bash completion se non lo è già (perl|vim)
 * Aggiungere un alias ll per "ls -l" (alias)
 * Aggiungere un alias help per mostrare le istruzioni del corso (alias)
+    * Bonus: aggiungere un alias solutions per le soluzioni (alias)
     * Bonus: aggiungere questo alias in bashrc per usarlo le prossime lezioni (echo)
