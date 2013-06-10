@@ -1,0 +1,11 @@
+Redirezioni e pipe
+
+* ls -a > list.txt
+* ls -a .. >> list.txt
+* wc -l < list.txt
+* ls -a .. | wc -l
+* ls -a | tee list.txt
+* ps -e | grep bash
+* ps -e | grep bash | cut -f " " -d 1
+* rm pippo.txt.txt 2> err.txt
+* comando >& /dev/null

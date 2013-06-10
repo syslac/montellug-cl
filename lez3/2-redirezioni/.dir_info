@@ -1,0 +1,12 @@
+Redirezioni e pipe
+
+* Stampa l'output di ls -a nel file list.txt (>)
+* Aggiungi ls della cartella padre in coda (>>)
+* Conta quanti file sono elencati in list.txt (<, wc)
+* Esegui la stessa operazione senza usare un file intermedio (|)
+* Stampa l'output di ls -a nel file precedente *e* a video (|, tee)
+* Cerca il processo bash in ps aux (|,grep)
+* Cerca il PID del processo bash in ps -e (|, grep, cut)
+* Rimuovere un file inesistente e mandare l'errore in err.txt (2>)
+* Sopprimere tutto l'output di un comando (>&)
+

@@ -1,0 +1,9 @@
+Wildcards:
+
+* Elenca tutti i file con estensione .txt (*)
+* Elenca tutti i file txt di una lettera (?)
+* Elenca tutti i file di una lettera, estensione esclusa (?)
+* Elenca tutti i file che iniziano per a,b,c ([])
+* Elenca a e d ({})
+* Rimuovi tutti i file che non iniziano per a-d ([^])
+

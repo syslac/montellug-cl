@@ -1,0 +1,10 @@
+Preferenze ed alias
+
+* Leggere il proprio file di preferenze bash (less)
+    * Bonus: aggiungere fortune ai prompt (echo)
+* Leggere il file globale di preferenze bash (less)
+    * Bonus: abilitare bash completion se non lo è già (perl|vim)
+* Aggiungere un alias ll per "ls -l" (alias)
+* Aggiungere un alias help per mostrare le istruzioni del corso (alias)
+    * Bonus: aggiungere un alias solutions per le soluzioni (alias)
+    * Bonus: aggiungere questo alias in bashrc per usarlo le prossime lezioni (echo)
