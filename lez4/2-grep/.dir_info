@@ -1,0 +1,10 @@
+Grep - Ricerca *nei* file
+
+* Ripasso: trova il processo shell corrente (ps, grep)
+* Trova informazioni sulla tua scheda di rete (lspci)
+* Verifica che qualcuno dei file in questa cartella contiene la parola "top5" (i)
+* Elenca i nomi file che la contengono (l)
+* Trova file e riga per ogni occorrenza (nH)
+* Raffina la ricerca per trovare solo la definizione (cerca "sub") (|)
+* Come l'esercizio precedente, ma escludi la definizione (v)
+* Ripeti la ricerca a partire dalla tua home (r)
