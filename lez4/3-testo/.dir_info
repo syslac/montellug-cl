@@ -2,10 +2,11 @@ Altri esercizi su manipolazione testo:
 
 * Seleziona un campo a scelta dall'output di ps aux (awk -F)
 * Ripeti lo stesso esercizio con perl (perl -pe)
-* Stampa una lista di file senza estensioni (perl -pe)
+* Stampa una lista di file senza estensioni (awk FS NF)
 * Leggi la terza riga delle soluzioni (head | tail)
 * Leggi la soluzione dell'esercizio 3 (perl -ne)
 * Stampa le righe che non sono vuote o commenti in main.pl (grep | grep)
 * Ripeti l'esercizio in perl, contando le righe (perl -ne)
 * Sostituisci ogni parola con "MontelLUG" in text.txt (perl -pi -e)
-* Cancella le righe che contengono "MontelLUG" da quel file (sed -i)
+* Sostituisci ogni "MontelLUG" con "LUG" in text.txt (sed -i)
+* Cancella le righe che contengono "LUG" da quel file (sed -i)
