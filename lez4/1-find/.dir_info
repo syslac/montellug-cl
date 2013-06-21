@@ -1,7 +1,8 @@
 Find - Ricerca *di* file
 
 * Trova l'eseguibile di find (name)
-* Trova tutti i file "inutili" nella lezione4 (iname)
+* Trova tutti i file inutile.txt nella lezione4 (iname)
+* Trova tutti i file "inutili" nella lezione4 (iregex)
 * Trova solo i file "inutili" nella cartella principale di lez4 (maxdepth)
 * Elimina tutti i file "inutili" nella lezione4 (-delete)
 * Trova tutti i "lorem.txt" in queste lezioni e rendili eseguibili (-exec)

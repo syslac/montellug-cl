@@ -1,7 +1,8 @@
 * find /usr/bin -name find 
-* find .. -iname "inutile*"
+* find .. -iname inutile.txt
+* find .. -iregex ".*inutil.*" oppure find .. -iname "inutil*"
 * find .. -maxdepth 1 -iname "inutile*"
 * find .. -iname "inutile*" -delete
-* find ../ -iname lorem.txt -exec chmod a+x {} \;
-* find ../ -iname '*lorem*' -print0 | xargs -0 chmod a-x
+* find ../.. -iname lorem.txt -exec chmod a+x {} \;
+* find ../.. -iname '*lorem*' -print0 | xargs -0 chmod a-x
 
